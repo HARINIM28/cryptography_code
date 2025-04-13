@@ -1,0 +1,211 @@
+:root {
+    --primary: #a8e6cf;
+    --secondary: #dcedc1;
+    --accent: #ffd3b6;
+    --text: #444444;
+    --error: #ffaaa5;
+    --success: #98ddca;
+    --button-hover: #baded7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    min-height: 100vh;
+    padding: 2rem;
+    color: var(--text);
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    color: var(--text);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.cipher-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: var(--secondary);
+    border-radius: 15px;
+}
+
+.cipher-btn {
+    background-color: white;
+    color: var(--text);
+    border: none;
+    padding: 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+}
+
+.cipher-btn:hover {
+    background-color: var(--button-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cipher-btn.active {
+    background-color: var(--primary);
+    color: var(--text);
+    font-weight: bold;
+    transform: translateY(1px);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: var(--text);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+textarea, input[type="text"] {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--secondary);
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+textarea:focus, input[type="text"]:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(168, 230, 207, 0.3);
+}
+
+.key-description {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.action-buttons button {
+    flex: 1;
+    background-color: var(--primary);
+    color: var(--text);
+    border: none;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.action-buttons button:hover {
+    background-color: var(--button-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.action-buttons button:active {
+    transform: translateY(1px);
+}
+
+.output-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    color: var(--text);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.output-box {
+    background-color: var(--secondary);
+    padding: 1.5rem;
+    border-radius: 12px;
+    min-height: 100px;
+    border: none;
+    word-wrap: break-word;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: var(--primary);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.copy-btn:hover {
+    opacity: 1;
+}
+
+.error-message {
+    color: var(--error);
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+} 

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classical Ciphers</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Classical Ciphers</h1>
+        
+        <div class="cipher-buttons">
+            <button class="cipher-btn" data-cipher="caesar">Caesar Cipher</button>
+            <button class="cipher-btn" data-cipher="atbash">Atbash Cipher</button>
+            <button class="cipher-btn" data-cipher="august">August Cipher</button>
+            <button class="cipher-btn" data-cipher="affine">Affine Cipher</button>
+            <button class="cipher-btn" data-cipher="vigenere">Vigenère Cipher</button>
+            <button class="cipher-btn" data-cipher="gronsfeld">Gronsfeld Cipher</button>
+            <button class="cipher-btn" data-cipher="beaufort">Beaufort Cipher</button>
+            <button class="cipher-btn" data-cipher="autoclave">Autoclave Cipher</button>
+            <button class="cipher-btn" data-cipher="runningkey">Running Key Cipher</button>
+            <button class="cipher-btn" data-cipher="hill">Hill Cipher</button>
+            <button class="cipher-btn" data-cipher="railfence">Rail Fence Cipher</button>
+            <button class="cipher-btn" data-cipher="route">Route Cipher</button>
+            <button class="cipher-btn" data-cipher="myszkowski">Myszkowski Cipher</button>
+        </div>
+
+        <div class="input-section">
+            <div class="input-group">
+                <label for="plaintext">Text to Encrypt/Decrypt:</label>
+                <textarea id="plaintext" placeholder="Enter your message here..."></textarea>
+            </div>
+            
+            <div class="input-group" id="keySection">
+                <label for="key">Key:</label>
+                <input type="text" id="key" placeholder="Enter key...">
+                <p id="keyDescription" class="key-description"></p>
+            </div>
+
+            <div class="action-buttons">
+                <button id="encryptBtn"><i class="fas fa-lock"></i> Encrypt</button>
+                <button id="decryptBtn"><i class="fas fa-unlock"></i> Decrypt</button>
+            </div>
+        </div>
+
+        <div class="output-section">
+            <h2>Result:</h2>
+            <div id="outputText" class="output-box">
+                <button class="copy-btn" id="copyBtn" title="Copy to clipboard">
+                    <i class="fas fa-copy"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
